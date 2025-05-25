@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: url(./main-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#app {
+    padding: 0;
+}
+.pointer {
+    cursor: pointer;
+}
+#main, #search {
+    /* background-color: aqua; */
+    height: 100vh;
+
+}
+.search {
+    padding: 1%;
+}
+.create {
+    padding: 1%;
+}
+.search:hover,.create:hover {
+    animation: searchHover 1s infinite;   
+}
+@keyframes searchHover {
+    0% {
+        transform: scale(1); /* 初始大小 */
+    }
+    50% {
+        transform: scale(1.08); /* 放大 */
+    }
+    100% {
+        transform: scale(1); /* 回到原始大小 */
+    }
+}
