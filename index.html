@@ -39,14 +39,21 @@
         </div>
 
         <!-- 查詢畫面 -->
-        <div id="search" v-if="currentPage == 'search'">
-            <div class="row justify-content-evenly">
+        <div id="search" v-if="currentPage == 'search'" class="row align-items-center">
+            <!-- <div class="row justify-content-evenly">
                 <div class="col-2 d-flex">
                     <label for="title" class="pointer h1">標題 : </label>
                 </div>
                 <input type="text" class="col-6" name="" id="title">
                 <button class="col-2 pointer btn btn-outline-primary pointer">查詢</button>
+            </div> -->
+            <div class="container">
+                <nav class="row g-3 navbar navbar-light justify-content-evenly">
+                    <input type="text" class="col-8 col-sm-6 form-control-lg" name="" id="title" placeholder="輸入 notepad 標題">
+                    <button class="col-8 col-sm-5 pointer fs-2 btn btn-outline-primary pointer">查詢 <i class="fa-solid fa-magnifying-glass " style="color: #63E6BE;"></i></button>
+                </nav>
             </div>
+
             <div>
                 <button type="button" class="pointer btn btn-outline-primary pointer"
                     @click="changeCurrentPage('main')">返回</button>
