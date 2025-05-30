@@ -6,16 +6,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+textarea {
+    resize: none !important;
+}
+#main, #search, #create {
+    /* background-color: aqua; */
+    height: 100vh;
+
+}
 #app {
     padding: 0;
 }
 .pointer {
     cursor: pointer;
-}
-#main, #search {
-    /* background-color: aqua; */
-    height: 100vh;
-
 }
 .search {
     padding: 1%;

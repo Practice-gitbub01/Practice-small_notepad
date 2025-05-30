@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            currentPage: "main",
+            currentPage: "create",
         }
     },
     methods: {

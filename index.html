@@ -21,7 +21,7 @@
         <div id="main" class="d-flex flex-column text-center justify-content-evenly" v-if="currentPage == 'main'">
             <!-- 第一列 標題 -->
             <div class="row pointer">
-                <span class="display-1 col" title="small_notepad"><strong>small_notepad</strong></span>
+                <span class="display-1 col text-nowrap" title="small_notepad"><strong>small_notepad</strong></span>
             </div>
 
             <!-- 第二列 功能選單 -->
@@ -47,10 +47,16 @@
                 <input type="text" class="col-6" name="" id="title">
                 <button class="col-2 pointer btn btn-outline-primary pointer">查詢</button>
             </div> -->
+            <div class="row pointer text-center">
+                <span class="display-1 col text-nowrap" title="查詢筆記"><strong>查詢筆記</strong></span>
+            </div>
+
             <div class="container">
                 <nav class="row g-3 navbar navbar-light justify-content-evenly">
-                    <input type="text" class="col-8 col-sm-6 form-control-lg" name="" id="title" placeholder="輸入 notepad 標題">
-                    <button class="col-8 col-sm-5 pointer fs-2 btn btn-outline-primary pointer">查詢 <i class="fa-solid fa-magnifying-glass " style="color: #63E6BE;"></i></button>
+                    <input type="text" class="col-8 col-sm-6 form-control-lg" name="" id="title"
+                        placeholder="輸入 notepad 標題">
+                    <button class="col-8 col-sm-5 pointer fs-2 btn btn-outline-primary pointer">查詢 <i
+                            class="fa-solid fa-magnifying-glass " style="color: #63E6BE;"></i></button>
                 </nav>
             </div>
 
@@ -61,9 +67,32 @@
         </div>
 
         <!-- 新增畫面 -->
-        <div id="create" v-if="currentPage == 'create'">
-            新增
-            <span class="pointer" @click="changeCurrentPage('main')">返回</span>
+        <div id="create" v-if="currentPage == 'create'" class="row align-items-center" overflow="scroll">
+            <div class="row pointer text-center">
+                <span class="display-1 col text-nowrap" title="新增筆記"><strong>新增筆記</strong></span>
+            </div>
+
+            <div class="row justify-content-evenly g-3">
+                <div class="col-8 col-sm-2 h1 text-center"><span>標題</span></div>
+                <input type="text" class="col-8 col-sm-8 form-control-lg" name="" id=""
+                    placeholder="輸入 notepad 標題">
+            </div>
+
+            <div class="row justify-content-evenly g-3">
+                <div class="col-8 col-sm-2 h1 text-center"><span>內容</span></div>
+                <textarea class="col-8 col-sm-8 rounded-3 border border-dark border-2" name="" id="" rows="5"></textarea>
+            </div>
+
+            <div class="row justify-content-evenly g-3">
+                <button type="button" class="col-10 col-sm-3 pointer text-nowrap btn btn-outline-primary overflow-hidden">上傳</button>
+                <button type="button" class="col-5 col-sm-3 pointer text-nowrap btn btn-outline-primary overflow-hidden">清除標題</button>
+                <button type="button" class="col-5 col-sm-3 pointer text-nowrap btn btn-outline-primary overflow-hidden">清除內容</button>
+            </div>
+
+            <div>
+                <button type="button" class="pointer btn btn-outline-primary pointer"
+                    @click="changeCurrentPage('main')">返回</button>
+            </div>
         </div>
     </div>
 
